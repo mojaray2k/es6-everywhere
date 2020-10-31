@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>var scoping</title>
+  </head>
+  <body>
+    <script>
+      // var are only available inside the function they are created or they are available in the global scope.
+      // let and const are available inside the blocks from which they are created
+
+      // var width = 100;
+      // console.log(width); //100
+      // width = 200;
+      // console.log(width); //200
+      
+      function setWidth() {
+        var width = 100;
+        console.log(width);
+      }
+      setWidth();
+
+      // console.log(width); // var-let-const.html:21 Uncaught ReferenceError: width is not defined
+
+      var age = 100;
+      if (age > 12) {
+        let dogYears = age * 7;
+        console.log(`You are ${dogYears} dog years old.`);
+      }
+
+      let height = 200;
+      const key = 'abc123';
+    </script>
+  </body>
+</html>
